@@ -37,8 +37,10 @@ function inicializaCronometro() {
       if (tempoRestante < 1) {
         campo.attr("disabled", true);
         clearInterval(cronometroID);
+        $("#botao-reiniciar").attr("disabled", false);
       }
     }, 1000);
+    $("#botao-reiniciar").attr("disabled",true);
   });
 }
 
